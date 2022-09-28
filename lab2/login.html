@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Вход в систему</title>
+</head>
+<body class = "login bg" >
+    <main>
+        <h1 class="entrance">Вход</h1>
+
+        
+
+        <form method="POST" action="https://httpbin.org/post" enctype="multipart/form-data">
+            
+            <input type="hidden" name="user_id" value="1" >
+
+                <div>
+
+        
+                <label class="login" for="login">Логин</label>
+                <input type="text" name="login" id="login" placeholder="Введите логин" required >
+                </div>
+            
+            
+            <div class="pass">
+                
+
+                
+                <label class="pass" for="login">Пароль</label>
+                <input type="text" name="pass" id="pass" >
+                
+
+            </div>
+
+            
+
+             
+            <div>
+                <input type="checkbox" name="agreement" id="agreement" value="true" >
+                <label for="agreement">Запомнить меня</label>
+            </div>
+             
+
+            <p> 
+                <button type="submit"> Вход </button>
+            </p>
+        </form>
+    
+    </main>
+    
+</body>
+</html>
