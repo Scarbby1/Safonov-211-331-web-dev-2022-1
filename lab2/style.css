@@ -1,0 +1,79 @@
+.login {
+    text-align: center;
+    margin: auto;
+    color: red;
+    
+  
+
+}
+
+.pass {
+    text-align: center;
+    vertical-align: 1px;
+    color: red;
+    padding: 1em;
+    
+
+}
+
+.all {
+    border: 5px solid black;
+    background-color: black;
+    
+}
+
+.main {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: aliceblue;
+}
+
+.entrance {
+   text-align: center;
+   margin: 50px; 
+   color:red;
+   border: 1em;
+   
+}
+
+
+.bg {
+    background-image: url(images/2560x1440-px-explosion-helmet-PUBG-tie-video-games-1433439.jpg);
+    height: 700px;
+    width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rimuru {
+    background-image: url(images/main_2x.jpg);
+    height: 700px;
+    width: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main1 {
+    color:white;
+}
+
+body {
+    font-family: 'Peralta', cursive;
+}
+
+a {
+    color: red; 
+    text-align: left;
+}
+
+.knopka {
+    border: 5px solid black;
+    background-color: black;
+    
+
+}
