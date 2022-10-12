@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Интернет магазин</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="print.css" media="print">
+</head>
+
+<body class="bg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+	<header class="header">
+		<div class="container d-flex">
+			<nav class="main-menu">
+				<ul>
+					<li><a href="">Главная</a></li>
+					<li><a href="">Каталог</a></li>
+					<li><a href="">Акции</a></li>
+					<li><a href="">Магазины</a></li>
+					<li><a href="">Контакты</a></li>
+				</ul>
+			</nav>
+			<div class="profile">
+				<a href="">Вход</a>
+			</div>
+		</div>
+	</header>
+
+	<main class="container d-flex">
+		<aside class="sidebar">
+			<form>
+				<fieldset>
+					<legend>Производители</legend>
+					<div>
+						<input type="checkbox" value="manufactuer1" name="manufactuer" id="manufactuer1">
+						<label for="manufactuer1">Производитель1</label>
+					</div>
+					<div>
+						<input type="checkbox" value="manufactuer2" name="manufactuer" id="manufactuer2">
+						<label for="manufactuer2">Производитель2</label>
+					</div>
+					<div>
+						<input type="checkbox" value="manufactuer3" name="manufactuer" id="manufactuer3">
+						<label for="manufactuer3">Производитель3</label>
+					</div>
+					<div>
+						<input type="checkbox" value="manufactuer3" name="manufactuer" id="manufactuer4">
+						<label for="manufactuer4">Производитель4</label>
+					</div>
+					<div>
+						<input type="checkbox" value="manufactuer4" name="manufactuer" id="manufactuer5">
+						<label for="manufactuer5">Производитель5</label>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Группы товаров</legend>
+					<div>
+						<input type="radio" value="group1" name="group" id="group1">
+						<label for="group1">Группа1</label>
+					</div>
+					<div>
+						<input type="radio" value="group2" name="group" id="group2">
+						<label for="group2">Группа2</label>
+					</div>
+					<div>
+						<input type="radio" value="group3" name="group" id="group3">
+						<label for="group3">Группа3</label>
+					</div>
+					<div>
+						<input type="radio" value="group4" name="group" id="group4">
+						<label for="group4">Группа4</label>
+					</div>
+					<div>
+						<input type="radio" value="group5" name="group" id="group5">
+						<label for="group5">Группа5</label>
+					</div>
+				</fieldset>
+				<button type="submit">Применить</button>
+			</form>
+		</aside>
+		
+		<div class="page-content ">
+			<h1 class="product-category-header">Магазин игр</h1>
+
+			<div class="products-list">
+				<div class="product-card">
+					<div class="product-image">
+						<img src="images/csgo.png" alt="product">
+					</div>
+
+					<div class="product-details">
+						<header>CS:GO</header>
+
+						<p class="information">Counter-Strike: Global Offensive (CS:GO) расширяет границы ураганной
+							командной игры, представленной ещё 19 лет назад.
+
+							CS:GO включает в себя новые карты, персонажей, оружие и режимы игры, а также улучшает
+							классическую составляющую CS (de_dust2 и т. п.).</p>
+
+						<div class="control">
+							<button class="btn">
+								<span class="price">250 &#8381;</span><span class="buy">Заказать</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-card">
+					<div class="product-image">
+						<img src="images/pubg.jpg" alt="product">
+					</div>
+
+					<div class="product-details">
+						<header>PUBG</header>
+
+						<p class="information">Высаживайтесь в стратегически важных местах, добывайте оружие и припасы и
+							постарайтесь выжить и остаться последней командой на одном из многочисленных полей боя.</p>
+
+						<div class="control">
+							<button class="btn">
+								<span class="price">700 &#8381;</span><span class="buy">Заказать</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-card">
+					<div class="product-image">
+						<img src="images/dbd.jpg" alt="product">
+					</div>
+
+					<div class="product-details">
+						<header>Dead by daylight</header>
+
+						<p class="information">Dead by Daylight - это многопользовательская игра в жанре ужасов в режиме
+							(4 против 1), где один игрок берет на себя роль жестокого Убийцы, а четыре других игрока
+							являются Выжившими, пытающимися сбежать от убийцы.</p>
+
+						<div class="control">
+							<button class="btn">
+								<span class="price">350 &#8381;</span><span class="buy">Заказать</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-card">
+					<div class="product-image">
+						<img src="images/bioshock_infinite_game_logo-1280x800.jpg" alt="product">
+					</div>
+
+					<div class="product-details">
+						<header>Bioshock Infinite</header>
+
+						<p class="information">BioShock Infinite — компьютерная игра в жанре шутера от первого лица с
+							элементами RPG, стимпанка и научной фантастики, разработанная студией Irrational Games под
+							руководством геймдизайнера Кена Левина. </p>
+
+						<div class="control">
+							<button class="btn">
+								<span class="price">850 &#8381;</span><span class="buy">Заказать</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-card">
+					<div class="product-image">
+						<img src="images/Rl.jpg" alt="product">
+					</div>
+
+					<div class="product-details">
+						<header>Rocket League</header>
+
+						<p class="information">Встречайте долгожданное продолжение Supersonic Acrobatic Rocket-Powered
+							Battle-Cars — всеми любимого основанного на физике сочетания футбола и гонок!</p>
+
+						<div class="control">
+							<button class="btn">
+								<span class="price">300 &#8381;</span><span class="buy">Заказать</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-card">
+					<div class="product-image">
+						<img src="images/Stray-1-1.png" alt="product">
+					</div>
+
+					<div class="product-details">
+						<header>Stray</header>
+
+						<p class="information">Stray – приключенческая игра от третьего лица, действие которой
+							разворачивается на неоновых улочках и в угрюмых, грязных подворотнях гибнущего кибергорода.
+							Блуждайте по подвалам и крышам, защищайтесь от неожиданных угроз и распутывайте загадки
+							этого неприветливого места, где нет никого, кроме безучастных дроидов и опасных тварей.</p>
+
+						<div class="control">
+							<button class="btn">
+								<span class="price">750 &#8381;</span><span class="buy">Заказать</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-card">
+					<div class="product-image">
+						<img src="images/MortalKombat11_brandmark__scaled_800-1-768x432.jpg" alt="product">
+					</div>
+
+					<div class="product-details">
+						<header>Mortal Kombat 11</header>
+
+						<p class="information">Компьютерная игра в жанре файтинг, разработанная американской студией
+							NetherRealm Studios под издательством WB Games для игровых платформ PlayStation 4, Xbox One,
+							Nintendo Switch и Microsoft Windows. </p>
+
+						<div class="control">
+							<button class="btn">
+								<span class="price">1500 &#8381;</span><span class="buy">Заказать</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-card">
+					<div class="product-image">
+						<img src="images/prey.jpeg" alt="product">
+					</div>
+
+					<div class="product-details">
+						<header>Prey</header>
+
+						<p class="information">В игре Prey в 2032 году вы просыпаетесь на борту «Талоса 1», орбитальной
+							космической станции. Вы ключевая часть эксперимента, который должен был навсегда изменить
+							человеческую расу, но привел к катастрофическим последствиям.</p>
+
+						<div class="control">
+							<button class="btn">
+								<span class="price">800 &#8381;</span><span class="buy">Заказать</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-card">
+					<div class="product-image">
+						<img src="images/gta5.jpg" alt="product">
+					</div>
+
+					<div class="product-details">
+						<header>GTA 5</header>
+
+						<p class="information">Действие игры происходит в вымышленном штате Сан-Андреас, прообразом
+							которого послужила Южная Калифорния. Сюжет в однопользовательском режиме строится вокруг
+							приключений троих грабителей, устраивающих всё более дерзкие ограбления и противостоящих как
+							организованной преступности, так и правоохранительным ведомствам.</p>
+
+						<div class="control">
+							<button class="btn">
+								<span class="price">700 &#8381;</span><span class="buy">Заказать</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button class="scroll-to-top-btn">
+			&#9650;
+		</button>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			&copy; Сафонов Кирилл
+		</div>
+	</footer>
+</body>
+
+</html>
