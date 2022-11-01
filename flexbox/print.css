@@ -1,0 +1,21 @@
+@media print {
+	.sidebar,
+	.header,
+	.footer,
+	.scroll-to-top-btn {
+		display: none;
+	}
+
+	.products-list {
+		justify-content: center;
+	}
+
+	.product-category-header {
+		text-align: center;
+	}
+
+	.control .btn {
+		border: 1px solid black;
+		color: black;
+	}
+}
