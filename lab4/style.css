@@ -1,0 +1,30 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(images/blue.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div {
+    border-radius: 5px;
+	border: 2px solid black;
+	padding-left: 1rem;
+	padding-right: 2rem;
+	background-image: url(images/sun.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-size: 30px;
+}
+
+a {
+	color: red;
+}
+
+body {
+    margin: 0;
+}
