@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- добавление стилей и скриптов bootstrap -->
+    <link rel="stylesheet" href="../static/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/bootstrap/bootstrap-icons.css">
+    <script defer src="../static/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- добавление собственных стилей и скриптов -->
+    <link rel="stylesheet" href="static/styles.css">
+    <script defer src="static/main.js"></script>
+    <title>MosGis</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <!-- добавлен justify-center чтобы на небольшых экранах навигация выглядела красиво -->
+            <div class="container justify-content-center justify-content-sm-between">
+                <!-- настройка элемента для логотипа и названия компании -->
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <img src="static/images/logo_company.png" alt="logo" class="logo">
+                    <div class="ms-4">
+                        <h1>MosGis</h1>
+                        <h2 class="fs-4">Экскурсии по Москве</h2>
+                    </div>
+                </a>
+                <!-- настройка элемента для навигации -->
+                <ul class="mb-2 mb-lg-0">
+                    <li>
+                        <a href="../index.html">Вернуться на главную страницу</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- секция доступных заявок -->
+        <section class="list-of-walking-routes">
+            <div class="container my-4">
+                <h2 class="text-center ms-4 fs-2" id="availableRequest">Оставленные заявки</h2>
+                <div class="table-of-available-requests">
+                    <!-- таблица с доступными заявками -->
+                    <div class="text-center">
+                        На данный момент заявок нет.<br>
+                        Чтобы создать заявку перейдите на <a href="../index.html">главную страницу</a>.
+                    </div>
+                </div>
+                <div class="pagination-bar d-flex justify-content-center py-3">
+                    <!-- Здесь будет располагаться навигация по страницам -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer py-3 mt-4">
+        <div class="container">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item">
+                    <a class="nav-link px-2" href="../index.html">Вернуться на главную страницу</a>
+                </li>
+            </ul>
+            <p class="text-center ">&copy; Safonov Kirill 211-331</p>
+        </div>
+    </footer>
+    <!-- Контейнер для уведомлений -->
+    <div class="alert-container">
+    </div>
+
+    <!-- модальное окно для удаления заявки -->
+    <div class="modal fade" id="delete-request" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Удаление задачи</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Вы уверены что хотите удалить
+                        заявку <span class="id-request"></span>?</p>
+                    <input type="hidden" id="request-id">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Нет</button>
+                    <button type="button" class="btn btn-danger del-request-btn" data-bs-dismiss="modal">Да</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- добавление шаблона всплывающего уведомления -->
+    <template id="alert-template">
+        <div class="alert-item d-flex justify-content-center">
+            <div class="alert alert-warning alert-dismissible fade show d-flex" role="alert" id="alertSetStyle">
+                <span class="text-alert-item text-center"></span>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </template>
+
+    <!-- добавление шаблона таблицы оставленных заявок -->
+    <template id="item-of-available-requests">
+        <div class="row">
+            <div class="col-12 col-lg-2 text-center">
+                <div class="id fs-4">
+                    № заявки
+                </div>
+            </div>
+            <div class="col-12 col-lg-3 text-center">
+                <div class="name fs-4">
+                    Название маршрута
+                </div>
+            </div>
+            <div class="col-12 col-lg-2 text-center">
+                <div class="date fs-4">
+                    Дата
+                </div>
+            </div>
+            <div class="col-12 col-lg-2 text-center">
+                <div class="cost fs-4">
+                    Стоимость
+                </div>
+            </div>
+            <div class="col-12 col-lg-2 text-center">
+                <div class="control fs-4">
+                    <!-- колонка для управляющих элементов -->
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- добавление шаблона элементов управления заявкой -->
+    <template id="control-items">
+        <li class="list-group-item task">
+            <!-- data-action добавлено, чтобы назначить единый обработчик -->
+            <i class="fs-4 bi bi-eye" data-bs-toggle="modal" data-bs-target="#show-request" data-action="show"></i>
+            <i class="fs-4 bi bi-pencil-fill" data-bs-toggle="modal" data-bs-target="#edit-request"
+                data-action="edit"></i>
+            <i class="fs-4 bi bi-trash" data-bs-toggle="modal" data-bs-target="#delete-request"
+                data-action="delete"></i>
+        </li>
+    </template>
+</body>
+
+</html>
