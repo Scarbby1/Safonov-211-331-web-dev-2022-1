@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Определение метода отправки запроса -->
+<form method="POST">
+  <!-- autocomplete="off" - отключает автозаполнение -->
+  <!-- Поле для ввода логина -->
+  <div class="form-floating mb-3">
+    <input autocomplete="off" type="text" name="login" class="form-control" id="floatingInput" placeholder="name@example.com">
+    <label for="floatingInput">Login</label>
+  </div>
+  <!-- Поле для ввода пароля -->
+  <div class="form-floating mb-3">
+    <input autocomplete="off" type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+    <label for="floatingPassword">Password</label>
+  </div>
+  <!-- Чекбокс для запоминания пользователя -->
+  <div class="form-check mb-3">
+    <input class="form-check-input" type="checkbox" name="remember_me" id="remember_me">
+    <label class="form-check-label" for="remember_me">
+      Запомнить меня
+    </label>
+  </div>
+  <!-- Кнопка для отправки формы -->
+  <button class="btn btn-primary">Войти</button>
+</form>
+{% endblock %}
